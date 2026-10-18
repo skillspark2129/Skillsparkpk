@@ -3,9 +3,11 @@
 <head>
 <title>Admin Logs - SkillSparkPK</title>
 <script>
-// SECURITY - Login Check
-const admin = localStorage.getItem('skillspark_admin');
-if (!admin) {
+// SECURITY - Final Fix
+const a1 = localStorage.getItem('skillspark_admin');
+const a2 = localStorage.getItem('isAdminLoggedIn');
+const a3 = localStorage.getItem('skillSparkAdmin');
+if (!a1 && a2 !== 'true' && !a3) {
   alert('Please Login First!');
   window.location.href = 'login.html';
 }
@@ -21,25 +23,25 @@ body{font-family:Arial;padding:20px;background:#f5f5f5;}
 <body>
 
 <div class="card">
-  <h1>SkillSparkPK Admin Panel ✅</h1>
-  <p>Logged in as: <b>as2129wq@gmail.com</b></p>
-  <button class="btn btn-red" onclick="localStorage.removeItem('skillspark_admin'); window.location.href='login.html';">Logout</button>
-  <a href="index.html"><button class="btn btn-blue">Go to Website</button></a>
+<h1>SkillSparkPK Admin Panel ✅</h1>
+<p>Logged in as: <b>as2129wq@gmail.com</b></p>
+<button class="btn btn-red" onclick="localStorage.removeItem('skillspark_admin'); localStorage.removeItem('isAdminLoggedIn'); window.location.href='login.html';">Logout</button>
+<a href="index.html"><button class="btn btn-blue">Go to Website</button></a>
 </div>
 
 <div class="card">
-  <h3>System Status</h3>
-  <p>✅ Login System: Working</p>
-  <p>✅ Password: Spark2129@ Protected</p>
-  <p>✅ Admin Email: as2129wq@gmail.com</p>
-  <p>✅ Website: skillsparkpk.vercel.app</p>
+<h3>System Status</h3>
+<p>✅ Login System: Working</p>
+<p>✅ Password: Spark2129@ Protected</p>
+<p>✅ Admin Email: as2129wq@gmail.com</p>
+<p>✅ Website: skillspakpk.vercel.app</p>
 </div>
 
 <div class="card">
-  <h3>Next Steps</h3>
-  <p>1. Yahan aap users dekh sakte ho</p>
-  <p>2. Yahan courses add kar sakte ho</p>
-  <p>Bolo Sir kya add karna hai?</p>
+<h3>Next Steps</h3>
+<p>1. Yahan aap users dekh sakte ho</p>
+<p>2. Yahan courses add kar sakte ho</p>
+<p>Bolo Sir kya add karna hai?</p>
 </div>
 
 </body>
