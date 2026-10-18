@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const ADMIN_EMAILS = [
         'as2129wq@gmail.com'
     ];
-    const ADMIN_PASSWORD = 'SparkAdmin2026@.';
+    const ADMIN_PASSWORD = 'Spark2129@';
 
     loginForm.addEventListener('submit', function(e) {
         e.preventDefault();
