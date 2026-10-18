@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSparkPK - Login</title>
+    <link rel="stylesheet" href="css/login-styles.css">
+    <script src="js/error-handler.js" defer></script>
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="glass-card">
+            <div class="card-header">
+                <h2>Welcome Back!</h2>
+                <p>Login to your SkillSparkPK account</p>
+            </div>
+            <form id="login-form">
+                <div class="input-group">
+                    <input type="email" id="email" name="email" placeholder=" " required>
+                    <label for="email">Email Address</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" name="password" placeholder=" " required>
+                    <label for="password">Password</label>
+                    <span class="password-toggle" onclick="togglePassword()">👁️</span>
+                </div>
+                <div class="form-actions">
+                    <a href="#forgot-password" class="forgot-password">Forgot Password?</a>
+                    <button type="submit" class="login-button">Login to SkillSparkPK</button>
+                </div>
+            </form>
+            <div class="signup-link">
+                Don't have an account? <a href="#signup">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Contact: as2129wq@gmail.com</p>
+    </footer>
+
+    <script src="js/login-script.js"></script>
+</body>
+</html>
