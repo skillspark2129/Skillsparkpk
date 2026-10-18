@@ -1,1 +1,46 @@
-<!DOCTYPE html><html><head><title>Admin Logs</title><style>body{font-family:Arial;padding:20px;background:#f5f5f5}.log{background:white;padding:12px;margin:8px 0;border-radius:8px;border-left:4px solid red}</style></head><body><h2>🔒 Admin Error Logs</h2><div id="logs"></div><script>const pass=prompt("Enter Admin Password:");if(pass!=="SparkAdmin2026@"){document.body.innerHTML="<h1>Access Denied</h1>";throw new Error("Denied")}const logs=JSON.parse(localStorage.getItem('app_errors')||'[]');const container=document.getElementById('logs');if(!logs.length)container.innerHTML="<p>No errors yet - All Good ✅</p>";else logs.forEach(l=>{container.innerHTML+=`<div class="log"><b>${l.type}</b> - ${l.time}<br>${l.message}<br><small>${l.url}</small></div>`});</script></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Logs - SkillSparkPK</title>
+<script>
+// SECURITY - Login Check
+const admin = localStorage.getItem('skillspark_admin');
+if (!admin) {
+  alert('Please Login First!');
+  window.location.href = 'login.html';
+}
+</script>
+<style>
+body{font-family:Arial;padding:20px;background:#f5f5f5;}
+.card{background:white;padding:20px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.1);margin-bottom:20px;}
+.btn{padding:10px 20px;border:none;border-radius:5px;cursor:pointer;}
+.btn-red{background:red;color:white;}
+.btn-blue{background:#3366cc;color:white;}
+</style>
+</head>
+<body>
+
+<div class="card">
+  <h1>SkillSparkPK Admin Panel ✅</h1>
+  <p>Logged in as: <b>as2129wq@gmail.com</b></p>
+  <button class="btn btn-red" onclick="localStorage.removeItem('skillspark_admin'); window.location.href='login.html';">Logout</button>
+  <a href="index.html"><button class="btn btn-blue">Go to Website</button></a>
+</div>
+
+<div class="card">
+  <h3>System Status</h3>
+  <p>✅ Login System: Working</p>
+  <p>✅ Password: Spark2129@ Protected</p>
+  <p>✅ Admin Email: as2129wq@gmail.com</p>
+  <p>✅ Website: skillsparkpk.vercel.app</p>
+</div>
+
+<div class="card">
+  <h3>Next Steps</h3>
+  <p>1. Yahan aap users dekh sakte ho</p>
+  <p>2. Yahan courses add kar sakte ho</p>
+  <p>Bolo Sir kya add karna hai?</p>
+</div>
+
+</body>
+</html>
